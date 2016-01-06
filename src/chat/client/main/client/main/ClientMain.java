@@ -5,10 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.nio.charset.Charset;
 
 /**
- * Created by baylrock on 06.01.2016.
+ * OLOLOLOLOLO template
  */
 public class ClientMain {
     public static void main (String[] args) {

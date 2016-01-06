@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * Created by baylrock on 06.01.2016.
+ * OLOLO template
  */
 public class ServerMain {
     ArrayList<PrintWriter> clients;
@@ -22,7 +22,7 @@ public class ServerMain {
     ServerMain() {
         try {
             ServerSocket SS = new ServerSocket(4242);
-            clients = new ArrayList<PrintWriter>();
+            clients = new ArrayList<>();
             while (true) {
                 Socket soc = SS.accept();
                 PrintWriter printWriter = new PrintWriter(soc.getOutputStream());
@@ -30,8 +30,8 @@ public class ServerMain {
 
                 Thread thread = new Thread(new ClientHandler(soc));
                 thread.start();
-                System.out.println("ClientCnected with adress - " + soc.getInetAddress());
-                SendToAll("ClientCnected with adress - " + soc.getInetAddress());
+                System.out.println("ClientConected with adress - " + soc.getInetAddress());
+                SendToAll("ClientConected with adress - " + soc.getInetAddress());
             }
 
 

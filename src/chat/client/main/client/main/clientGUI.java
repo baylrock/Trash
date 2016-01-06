@@ -81,7 +81,7 @@ public class clientGUI extends JFrame {
         mainPanel.add(Send);
 
         getContentPane().add(BorderLayout.CENTER,mainPanel);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         pack();
         setVisible(true);
 
@@ -99,7 +99,7 @@ public class clientGUI extends JFrame {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (textName.getText() == "") { textName.setText("ANONYMUS");}
+            if (textName.getText().equals("")) { textName.setText("ANONYMUS");}
             try {
                 PrintWriter writer = mainObj.getWriter();
 
@@ -120,7 +120,7 @@ public class clientGUI extends JFrame {
             try {
             mainObj.socket = new Socket("144.76.102.25",4242);
             mainObj.setWriter(new PrintWriter(mainObj.socket.getOutputStream()));
-            mainObj.setReader(new BufferedReader(new InputStreamReader(mainObj.socket.getInputStream(),"windows-1251")));
+            mainObj.setReader(new BufferedReader(new InputStreamReader(mainObj.socket.getInputStream(),"UTF-8")));
             System.out.println("Conection complite");
             } catch (IOException ex ) {
                 ex.printStackTrace();
