@@ -6,10 +6,8 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.SocketException;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Random;
 
 /**
  * Created by baylrock on 06.01.2016.
