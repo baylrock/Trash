@@ -63,7 +63,7 @@ public class ServerMain {
         public ClientHandler(Socket clientSocet) {
             soc = clientSocet;
             try {
-                reader = new BufferedReader(new InputStreamReader(soc.getInputStream(),"windows-1251"));
+                reader = new BufferedReader(new InputStreamReader(soc.getInputStream(),"UTF-8"));  //windows-1251
             } catch (IOException e) {
                 e.printStackTrace();
             }

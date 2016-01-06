@@ -1,2 +1,2 @@
 Manifest-Version: 1.0
-Main-Class: chat.client.main.server.main.ServerMain
+Main-Class: chat.client.main.client.main.ClientMain
