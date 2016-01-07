@@ -21,11 +21,13 @@ public class clientGUI extends JFrame {
     private ClientMain mainObj;
     private JButton Send;
     private JTextField textField;
-    private JTextField textName;
     private JTextArea chatArea;
     private JMenuBar menuBar;
     private JMenuItem reconectMenuItem;
+    private JMenuItem nameMenuItem;
     private JMenu menu;
+    private String UserName;
+    private NameFrame nameFrame;
 
 
     public ClientMain getMainObj() {
@@ -55,10 +57,13 @@ public class clientGUI extends JFrame {
 
     clientGUI(ClientMain mainObj) {
         this.mainObj = mainObj;
+        nameFrame = new NameFrame();
+
         Send = new JButton("Send Mess");
         Send.addActionListener(new SendActionListener());
+
         textField = new JTextField(20);
-        textName = new JTextField(10);
+
         chatArea = new JTextArea(15,50);
         chatArea.setEditable(false);
         chatArea.setLineWrap(true);
@@ -70,20 +75,26 @@ public class clientGUI extends JFrame {
         menuBar = new JMenuBar();
         menuBar.add((menu = new JMenu("Menu")));
         menu.add((reconectMenuItem = new JMenuItem("Reconect")));
+        menu.add((nameMenuItem = new JMenuItem("Set NickName")));
+        nameMenuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                nameFrame.setVisible(true);
+                mainObj.gui.setVisible(false);
+            }
+        });
         reconectMenuItem.addActionListener(new ReconectMenuItemListener());
         setJMenuBar(menuBar);
 
         JPanel mainPanel = new JPanel();
         mainPanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
         mainPanel.add(chatScrol);
-        mainPanel.add(textName);
         mainPanel.add(textField);
         mainPanel.add(Send);
 
         getContentPane().add(BorderLayout.CENTER,mainPanel);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         pack();
-        setVisible(true);
 
     }
 
@@ -99,11 +110,13 @@ public class clientGUI extends JFrame {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (textName.getText().equals("")) { textName.setText("ANONYMUS");}
+            String message;
+            if ((message=textField.getText()).equals("")) {return;}
+            if (UserName.equals("")) { UserName = "ANONYMUS";}
             try {
                 PrintWriter writer = mainObj.getWriter();
 
-                writer.println(textName.getText()+" : "+textField.getText());
+                writer.println(UserName+" : "+textField.getText());
                 writer.flush();
             } catch (Exception ex) {
                 ex.printStackTrace();
@@ -127,6 +140,37 @@ public class clientGUI extends JFrame {
                 System.out.println("Conection Errrorrrr");
             }
         }
+    }
+
+    class NameFrame extends JFrame {
+
+        public NameFrame() {
+            JTextField field = new JTextField(10);
+            field.requestFocus();
+            JFrame frame = this;
+
+            JButton button = new JButton("Set");
+            JPanel panel = new JPanel();
+            panel.add(field);
+            panel.add(button);
+            getContentPane().add(panel);
+
+            button.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+
+                    UserName = field.getText();
+                    if (!UserName.equals("")) {
+                        mainObj.gui.setVisible(true);
+                        frame.setVisible(false);
+                    }
+
+                }
+            });
+            pack();
+            setVisible(true);
+        }
+
     }
 
 

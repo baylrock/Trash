@@ -30,7 +30,7 @@ public class ClientMain {
 
     }
 
-    private void SetConection() {
+    public void SetConection() {
         try {
             socket = new Socket("144.76.102.25",4242);
             setWriter(new PrintWriter(socket.getOutputStream()));
