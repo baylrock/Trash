@@ -6,12 +6,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.nio.charset.Charset;
 
 /**
  * Created by baylrock on 06.01.2016.
@@ -28,6 +29,8 @@ public class clientGUI extends JFrame {
     private JMenu menu;
     private String UserName;
     private NameFrame nameFrame;
+    private JFrame usersframe;
+    private JTextArea usersArea;
 
 
     public ClientMain getMainObj() {
@@ -81,6 +84,7 @@ public class clientGUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 nameFrame.setVisible(true);
                 mainObj.gui.setVisible(false);
+                usersframe.setVisible(false);
             }
         });
         reconectMenuItem.addActionListener(new ReconectMenuItemListener());
@@ -92,9 +96,25 @@ public class clientGUI extends JFrame {
         mainPanel.add(textField);
         mainPanel.add(Send);
 
+
+
+
         getContentPane().add(BorderLayout.CENTER,mainPanel);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         pack();
+
+
+        usersframe = new JFrame();
+        usersframe.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        JScrollPane usersScrolPane = new JScrollPane(usersArea = new JTextArea(10,10));
+        usersArea.append("Users Online: \n");
+        usersScrolPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        usersframe.getContentPane().add(usersScrolPane);
+        usersframe.pack();
+
+
+
 
     }
 
@@ -105,6 +125,15 @@ public class clientGUI extends JFrame {
     public void setChatArea(JTextArea chatArea) {
         this.chatArea = chatArea;
     }
+
+    public JTextArea getUsersArea() {
+        return usersArea;
+    }
+
+    public void setUsersArea(JTextArea usersArea) {
+        this.usersArea = usersArea;
+    }
+
 
     class SendActionListener implements ActionListener {
 
@@ -163,6 +192,7 @@ public class clientGUI extends JFrame {
                     if (!UserName.equals("")) {
                         mainObj.gui.setVisible(true);
                         frame.setVisible(false);
+                        usersframe.setVisible(true);
                     }
 
                 }

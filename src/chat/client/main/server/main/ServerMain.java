@@ -1,9 +1,6 @@
 package chat.client.main.server.main;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -14,6 +11,7 @@ import java.util.Iterator;
  */
 public class ServerMain {
     ArrayList<PrintWriter> clients;
+    ArrayList<Socket> sockets ;
 
     public static void main(String[] args) {
         ServerMain sm = new ServerMain();
@@ -23,15 +21,23 @@ public class ServerMain {
         try {
             ServerSocket SS = new ServerSocket(4242);
             clients = new ArrayList<>();
+            sockets = new ArrayList<>();
             while (true) {
                 Socket soc = SS.accept();
-                PrintWriter printWriter = new PrintWriter(soc.getOutputStream());
+                PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(soc.getOutputStream(),"UTF-8"));
+                sockets.add(soc);
                 clients.add(printWriter);
 
                 Thread thread = new Thread(new ClientHandler(soc));
                 thread.start();
                 System.out.println("ClientConected with adress - " + soc.getInetAddress());
                 SendToAll("ClientConected with adress - " + soc.getInetAddress());
+                Iterator<Socket> iterator = sockets.iterator();
+                String message = "/list/";
+                while (iterator.hasNext()) {
+                   message+=iterator.next().getInetAddress()+"\n";
+                }
+                SendToAll(message);
             }
 
 
@@ -47,6 +53,7 @@ public class ServerMain {
         @Override
         public void run() {
             String message;
+
             try {
 
                 while ((message = reader.readLine())!=null) {
