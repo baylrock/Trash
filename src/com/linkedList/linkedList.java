@@ -1,5 +1,7 @@
 package com.linkedList;
 
+import java.util.Arrays;
+
 /**
  * Created by baylrock on 12.11.2015.
  */
@@ -105,6 +107,7 @@ public class linkedList {
         }
         Println("Cuurent ID = " + this.Currentlink.getID()+"  ");
         Println("Value = " + this.Currentlink.getValue()+"  ");
+        Arrays.copyOf(new Object[3],2,new Object[0].getClass());
     }
 
     public void moveToFirstLink () {
