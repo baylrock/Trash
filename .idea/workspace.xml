@@ -6,23 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d5f957f-e965-4750-923e-b3c15523241f" name="Default" comment="Language:ru/incoding_fix№2">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/Map/Bank.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/Map/HashMap.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/Map/IMap.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/labs/lab1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/lol/chat/client/main/client/main/ClientMain$InpurReaderThread.class" afterPath="$PROJECT_DIR$/out/production/lol/chat/client/main/client/main/ClientMain$InpurReaderThread.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/lol/chat/client/main/client/main/ClientMain.class" afterPath="$PROJECT_DIR$/out/production/lol/chat/client/main/client/main/ClientMain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/lol/chat/client/main/client/main/clientGUI$ReconectMenuItemListener.class" afterPath="$PROJECT_DIR$/out/production/lol/chat/client/main/client/main/clientGUI$ReconectMenuItemListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/lol/chat/client/main/client/main/clientGUI$SendActionListener.class" afterPath="$PROJECT_DIR$/out/production/lol/chat/client/main/client/main/clientGUI$SendActionListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/lol/chat/client/main/client/main/clientGUI.class" afterPath="$PROJECT_DIR$/out/production/lol/chat/client/main/client/main/clientGUI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/lol/chat/client/main/server/main/ServerMain$ClientHandler.class" afterPath="$PROJECT_DIR$/out/production/lol/chat/client/main/server/main/ServerMain$ClientHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/lol/chat/client/main/server/main/ServerMain.class" afterPath="$PROJECT_DIR$/out/production/lol/chat/client/main/server/main/ServerMain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/lol/com/linkedList/linkedList.class" afterPath="$PROJECT_DIR$/out/production/lol/com/linkedList/linkedList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/lol/com/main/Main.class" afterPath="$PROJECT_DIR$/out/production/lol/com/main/Main.class" />
+    <list default="true" id="4d5f957f-e965-4750-923e-b3c15523241f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/linkedList/linkedList.java" afterPath="$PROJECT_DIR$/src/com/linkedList/linkedList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/main/Main.java" afterPath="$PROJECT_DIR$/src/com/main/Main.java" />
     </list>
     <ignored path="lol.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,12 +34,12 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5774947">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.54140127">
+              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1102#1103#0" expanded="true" />
-                <element signature="e#1140#1141#0" expanded="true" />
+                <element signature="e#1116#1117#0" expanded="true" />
+                <element signature="e#1154#1155#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1075,7 +1060,7 @@
       <workItem from="1454934727606" duration="19683000" />
       <workItem from="1455753312820" duration="13483000" />
       <workItem from="1456056605310" duration="11168000" />
-      <workItem from="1456274405021" duration="5035000" />
+      <workItem from="1456274405021" duration="5402000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1452122024586</created>
@@ -1113,11 +1098,17 @@
       <option name="project" value="LOCAL" />
       <updated>1452135207804</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Language:ru/incoding_fix№2">
+      <created>1456404908268</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1456404908268</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205610000" />
+    <option name="totallyTimeSpent" value="205977000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1171,10 +1162,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="111" />
     <MESSAGE value="Language:ru/incoding_fix" />
-    <MESSAGE value="Language:ru/incoding_fix№2" />
     <MESSAGE value="GUI/setNickName_added" />
     <MESSAGE value="UserOnlineBar added" />
-    <option name="LAST_COMMIT_MESSAGE" value="UserOnlineBar added" />
+    <MESSAGE value="Language:ru/incoding_fix№2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Language:ru/incoding_fix№2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1193,8 +1184,8 @@
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1102#1103#0" expanded="true" />
-            <element signature="e#1140#1141#0" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
+            <element signature="e#1154#1155#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1226,8 +1217,8 @@
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1102#1103#0" expanded="true" />
-            <element signature="e#1140#1141#0" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
+            <element signature="e#1154#1155#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1259,8 +1250,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1102#1103#0" expanded="true" />
-            <element signature="e#1140#1141#0" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
+            <element signature="e#1154#1155#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1465,6 +1456,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+          <folding>
+            <element signature="e#497#498#0" expanded="false" />
+            <element signature="e#536#537#0" expanded="false" />
+            <element signature="e#754#755#0" expanded="false" />
+            <element signature="e#793#794#0" expanded="false" />
+            <element signature="e#819#820#0" expanded="false" />
+            <element signature="e#852#853#0" expanded="false" />
+            <element signature="e#888#889#0" expanded="false" />
+            <element signature="e#922#923#0" expanded="false" />
+            <element signature="e#950#951#0" expanded="false" />
+            <element signature="e#982#983#0" expanded="false" />
+            <element signature="e#1008#1009#0" expanded="false" />
+            <element signature="e#1033#1034#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1487,6 +1492,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8318584">
           <caret line="109" column="18" selection-start-line="109" selection-start-column="18" selection-end-line="109" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1714,12 +1720,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5774947">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.54140127">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1102#1103#0" expanded="true" />
-            <element signature="e#1140#1141#0" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
+            <element signature="e#1154#1155#0" expanded="true" />
           </folding>
         </state>
       </provider>
