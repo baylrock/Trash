@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Created by baylrock on 28.12.2015.
  */
-final public class IOFile {
+public class IOFile {
 
     static public void saveFile(File file, ArrayList<Card> list) throws IOException {
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
